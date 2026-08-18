@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Para Paz</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Para Paz" />
+  <meta property="og:description" content="Lo que nunca pudimos ser" />
+  <meta property="og:url" content="https://john58666.github.io/carta-para-paz/" />
+  <meta property="og:image" content="https://john58666.github.io/carta-para-paz/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Caveat:wght@500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ LOCK SCREEN ============ -->
+  <div id="lockScreen" class="lock-screen" aria-label="Pantalla bloqueada">
+    <div class="lock-inner">
+      <h1 class="lock-title">Para Paz</h1>
+      <p class="lock-subtitle">Lo que nunca pudimos ser</p>
+
+      <div class="heart-lock" id="heartLock" aria-hidden="true">
+        <svg viewBox="0 0 100 90" width="84" height="76">
+          <path class="heart-shape" d="M50 84 C 18 60 2 42 2 26 C 2 12 12 4 24 4 C 32 4 42 10 50 20 C 58 10 68 4 76 4 C 88 4 98 12 98 26 C 98 42 82 60 50 84 Z" />
+          <circle class="heart-hole" cx="50" cy="36" r="7" />
+          <rect class="heart-key" x="47" y="36" width="6" height="18" rx="2" />
+        </svg>
+      </div>
+
+      <div class="dots" id="dots" role="status" aria-label="Código introducido">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="keypad" id="keypad" aria-label="Teclado numérico"></div>
+
+      <button class="hint" id="hintToggle" type="button">¿Olvidaste la clave?</button>
+      <p class="hint-text" id="hintText" hidden></p>
+    </div>
+  </div>
+
+  <!-- ============ EXPERIENCE (scenes) ============ -->
+  <main id="app" class="experience" hidden>
+
+    <section class="scene" data-scene="fecha" aria-label="La fecha">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="origen" aria-label="El origen">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="conocerte" aria-label="Conocerte">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="recuerdos" aria-label="Los recuerdos">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="video" aria-label="El video">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="distancia" aria-label="La distancia">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="hice" aria-label="Lo que hice">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="aceptacion" aria-label="Lo que ya no puedo controlar">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="safe-place" aria-label="Safe Place">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="silencio" aria-label="Silencio">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="nosotros" aria-label="Nosotros">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="despedida" aria-label="La despedida">
+      <div class="scene-inner"></div>
+    </section>
+
+    <section class="scene" data-scene="firma" aria-label="La firma">
+      <div class="scene-inner"></div>
+    </section>
+
+  </main>
+
+  <!-- ============ FLOATING UI ============ -->
+  <div class="floating-ui" hidden>
+    <button class="fab" id="musicToggle" type="button" aria-label="Escuchar Safe Place" aria-pressed="false">
+      <i data-lucide="music"></i>
+    </button>
+  </div>
+
+  <!-- ============ SPOTIFY MODAL ============ -->
+  <div id="spotifyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="spotifyTitle" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close" id="spotifyClose" type="button" aria-label="Cerrar">
+        <i data-lucide="x"></i>
+      </button>
+      <h2 class="modal-title" id="spotifyTitle">Paz</h2>
+      <p class="modal-note">Reproduce esta canción mientras lees.</p>
+      <div class="spotify-embed" id="spotifyEmbed"></div>
+    </div>
+  </div>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div id="lightbox" class="lightbox" hidden aria-label="Vista ampliada de la foto">
+    <img class="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption"></p>
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar">
+      <i data-lucide="x"></i>
+    </button>
+  </div>
+
+  <!-- ============ NAV CONTROLS ============ -->
+  <nav class="scene-nav" aria-label="Navegación" hidden>
+    <button class="nav-btn" id="backBtn" type="button" aria-label="Anterior">
+      <i data-lucide="chevron-up"></i>
+    </button>
+    <button class="nav-btn" id="nextBtn" type="button" aria-label="Siguiente">
+      <i data-lucide="chevron-down"></i>
+    </button>
+  </nav>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/lucide@1.31.0"></script>
+  <script src="assets/content/story.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
