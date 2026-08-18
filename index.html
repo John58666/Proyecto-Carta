@@ -24,6 +24,19 @@
 </head>
 <body>
 
+  <!-- ============ GRANO ANIMADO (pergamino vivo) ============ -->
+  <div class="grain" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="none">
+      <filter id="grainNoise">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch">
+          <animate attributeName="baseFrequency" dur="14s" values="0.9;1.08;0.9" keyTimes="0;0.5;1" repeatCount="indefinite" />
+        </feTurbulence>
+        <feColorMatrix type="saturate" values="0" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grainNoise)" />
+    </svg>
+  </div>
+
   <!-- ============ LOCK SCREEN ============ -->
   <div id="lockScreen" class="lock-screen" aria-label="Pantalla bloqueada">
     <div class="lock-inner">
