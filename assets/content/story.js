@@ -105,9 +105,6 @@ window.STORY = {
       ],
       song: true
     },
-    silencio: {
-      blocks: []
-    },
     despedida: {
       quote: true,
       blocks: [

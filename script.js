@@ -27,7 +27,6 @@
     "hice",
     "aceptacion",
     "safe-place",
-    "silencio",
     "despedida",
     "firma",
   ];
@@ -353,7 +352,11 @@
   function renderSignature(container) {
     container.appendChild(el("p", "signature-closing", "Con amor,"));
     container.appendChild(el("p", "signature-name", story.meta.signature));
-    container.appendChild(el("p", "signature-for", "para " + story.meta.name));
+    const forP = el("p", "signature-for", "para ");
+    const strong = document.createElement("strong");
+    strong.textContent = story.meta.name;
+    forP.appendChild(strong);
+    container.appendChild(forP);
     container.appendChild(el("p", "signature-date", formatMonthYear(new Date())));
   }
 

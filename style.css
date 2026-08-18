@@ -390,6 +390,10 @@ img {
   margin-top: 6px;
 }
 
+.signature-for strong {
+  font-weight: 700;
+}
+
 .signature-date {
   font-family: var(--font-body);
   color: var(--color-text-muted);
