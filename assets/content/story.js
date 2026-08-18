@@ -108,9 +108,6 @@ window.STORY = {
     silencio: {
       blocks: []
     },
-    nosotros: {
-      photo: "nosotros"
-    },
     despedida: {
       quote: true,
       blocks: [

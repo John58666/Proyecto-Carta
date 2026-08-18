@@ -412,6 +412,15 @@ img {
   margin-top: 48px;
 }
 
+.scene[data-scene="firma"] .photo {
+  max-width: 250px;
+  margin: 20px auto 0;
+}
+
+.scene[data-scene="firma"] .photo-caption {
+  margin-top: 12px;
+}
+
 .photo-frame {
   background: var(--color-white-warm);
   padding: 12px;
