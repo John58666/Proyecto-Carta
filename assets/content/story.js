@@ -26,7 +26,7 @@ window.STORY = {
     nosotros: { src: "assets/photos/nosotros.webp", caption: "Y esta fue nuestra última imagen juntos." }
   },
   phrase: {
-    central: "Qué extraño es el amor: a veces consigue hacer hogar en una persona que nunca pudimos tocar. Yo encontré el mío en ti, detrás de una pantalla, entre voces, noches interminables y años de distancia. Y aun hoy, a pesar de todo, sigo amándote. Te amé con todo lo que supe amar, también con los errores que rompieron tu confianza. Y quizá una de las formas más dolorosas de amar sea aceptar que algo pudo ser verdadero hasta lo más profundo de nosotros y, aun así, no convertirse en una vida compartida."
+    central: "Qué extraño es el amor: a veces consigue hacer hogar en una persona que nunca pudimos tocar. Yo encontré el mío en ti, detrás de una pantalla, entre voces, noches interminables y años de distancia. Y después: nunca dimensioné que una relación a distancia, con una chica a la que nunca toqué, nunca olí y nunca besé, pudiera enseñarme algo tan profundo sobre el amor. Y aun hoy, a pesar de todo, sigo amándote. Te amé con todo lo que supe amar, también con los errores que rompieron tu confianza. Y quizá una de las formas más dolorosas de amar sea aceptar que algo pudo ser verdadero hasta lo más profundo de nosotros y, aun así, no convertirse en una vida compartida."
   },
   scenes: {
     fecha: {
