@@ -28,7 +28,6 @@
     "aceptacion",
     "safe-place",
     "silencio",
-    "nosotros",
     "despedida",
     "firma",
   ];

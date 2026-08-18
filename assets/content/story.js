@@ -124,7 +124,8 @@ window.STORY = {
       ]
     },
     firma: {
-      signature: true
+      signature: true,
+      photo: "nosotros"
     }
   }
 };
